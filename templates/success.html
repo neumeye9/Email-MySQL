@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Email Validation</title>
+        <style>
+            .wrapper{
+                width:1000px;
+                height: 1000px;
+                border: 5px solid black;
+                background-color: lightgray;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 100px;
+            }
+            .success{
+                margin-left: auto;
+                margin-right:auto;
+                width: 600px;
+                height: 100px;
+                background-color:green;
+                border: 2px solid black;
+                margin-top: 20px;
+            }
+            .success p{
+                font-size: 24px;
+                text-align: center;
+            }
+            h1{
+                margin-left: 20px;
+                text-align: center;
+            }
+            .entry{
+                width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                margin-bottom: 10px;
+                
+            }
+            .entry p{
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+        </style>
+        <!--<link rel="stylesheet" href="{{ url_for('static', filename='css/success.css')}}">-->
+    </head>
+    <body>
+        <div class="wrapper">
+            <!--{{all_emails}}-->
+            <div class="success">
+            {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            {% for message in messages%}
+                                <p>{{message}}</p>
+                            {% endfor %}
+                        {% endif %}
+                {% endwith %}
+            </div>
+            <h1>Email Addresses Entered:</h1>
+                <div class="entry">
+                    <table>
+                        <tbody>
+                                <tr>
+                                    <td>
+                                        {% for email in all_emails%}
+                                            <p>{{email['email']}} {{email['created_at']}}</p>
+                                        {% endfor %}
+                                    </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+    </body>
+</html>

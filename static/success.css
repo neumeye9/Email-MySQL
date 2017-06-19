@@ -1,0 +1,43 @@
+/* CSS RESET SETTINGS HERE */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.wrapper{
+    width:1000px;
+    height: 1000px;
+    border: 5px solid black;
+    background-color: lightgray;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+.success{
+    margin-left: auto;
+    margin-right:auto;
+    width: 600px;
+    height: 100px;
+    background-color:green;
+    border: 2px solid black;
+    margin-top: 20px;
+}
+.success p{
+    font-size: 24px;
+    text-align: center;
+}
+h1{
+    margin-left: 20px;
+    text-align: center;
+}
+.entry{
+    width: 250px;
+    border: 2px solid blue;
+    margin-left: 20px;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 10px;    
+}
+.entry p{
+    margin-left: auto;
+    margin-right: auto;
+}
